@@ -11,7 +11,7 @@
         }
     };
 
-    makeGrid(64)
+    makeGrid(16)
     // Beware of borders and margins, as they can adjust the size of the squares
 
     // Set hover effect to change grid div colors when passed over

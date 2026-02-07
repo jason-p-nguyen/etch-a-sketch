@@ -1,12 +1,22 @@
+h1,
+button {
+    display: flex;
+    justify-content: center;
+}
+
+
 #container {
+    aspect-ratio: 1 / 1;
     display: flex;
     border: 1px solid black;
     flex-wrap: wrap;
+    padding: 4px;
+    min-width: 0px;
 }
 
 .cell {
     flex: 1;
-    padding: 40px;
+    padding: 20px;
     border: 1px solid grey;
     margin: 1px; 
 }
