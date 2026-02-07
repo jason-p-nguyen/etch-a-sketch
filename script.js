@@ -3,15 +3,34 @@
 
     // Contain the grid squares in "container" div
     const container = document.getElementById("container");
+    let rows = document.getElementsByClassName("rowCell");
+    let cells = document.getElementsByClassName("cell");
+
     // Use flexbox to make divs appear as a grid
-    function makeGrid(numDivs) {
-        for (let d = 0; d < numDivs; d++) {
-            let cell = document.createElement('div');
-            container.appendChild(cell).className = "cell";
-        }
+    function makeGrid(num) {
+        makeRows(num);
+        makeColumns(num);
     };
 
-    makeGrid(16)
+    // make grid create rows
+    function makeRows(rowNum) {
+        for (r = 0; r < rowNum; r++) {
+            let row = document.createElement('div');
+            container.appendChild(row).className = "rowCell";
+        };
+    };
+
+    // make grid create columns
+    function makeColumns(cellNum) {
+        for (let i = 0; i < rows.length; i++) {
+            for (j = 0; j < cellNum; j++) {
+                let newCell = document.createElement('div');
+                rows[j].appendChild(newCell).className = "cell";
+            };
+        };
+    };
+
+    makeGrid(20)
     // Beware of borders and margins, as they can adjust the size of the squares
 
     // Set hover effect to change grid div colors when passed over
