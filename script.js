@@ -7,7 +7,6 @@
     function makeGrid(numDivs) {
         for (let d = 0; d < numDivs; d++) {
             let cell = document.createElement('div');
-            cell.textContent = (d + 1)
             container.appendChild(cell).className = "cell";
         }
     };
