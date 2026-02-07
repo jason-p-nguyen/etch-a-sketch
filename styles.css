@@ -1,0 +1,11 @@
+#container {
+    display: flex;
+    border: 1px solid black;
+    flex-wrap: wrap;
+}
+
+.cell {
+    padding: 1px;
+    border: 1px solid grey;
+    margin: 1px; 
+}
