@@ -1,7 +1,7 @@
 const container = document.getElementById("container");
 const button = document.querySelector("button");
 
-function generateGrid(numOfSquares = 16) {
+function generateGrid(numOfSquares) {
     //This loop creates the top-row of the grid
     for (let i = 0; i <= numOfSquares; i++) {
         // This loop fills out the grid from the top-row
@@ -12,20 +12,17 @@ function generateGrid(numOfSquares = 16) {
             // Changes square background color
             newSquare.addEventListener("mouseenter", (event) => {
                 event.target.style.backgroundColor = "purple";
-            })
+            });
         };
     };
 };
 
-
 // BEGIN function for new grid
 button.addEventListener("click", (event) => {
-    input = prompt("Please enter the number of squares you want", "16");
-    alert(input);
-})
+    numOfSquares = prompt("Please enter the number of squares you want", "16");
+    generateGrid(numOfSquares);
+});
 
-// LISTEN for CLICK
-// GET PROMPT INPUT from user for numOfSquares
 // SET limit to 100
 // SET width limit to 960px in CSS
 // REMOVE current grid
