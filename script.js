@@ -1,5 +1,6 @@
 const container = document.getElementById("container");
 const button = document.querySelector("button");
+let rows = document.getElementsByClassName("row")
 
 // function generateGrid(numOfSquares = 3) {
 //     //This loop creates the top-row of the grid
@@ -17,15 +18,29 @@ const button = document.querySelector("button");
 //     };
 // };
 
+function generateGrid(numOfSquares = 4) {
+    makeRow(numOfSquares);
+    makeColumns(numOfSquares);
+
+}
+
 function makeRow(numOfSquares) {
-    for (let i = 1; i <= numOfSquares; i++) {
+    for (let r = 0; r < numOfSquares; r++) {
         let rowSquare = document.createElement("div");
-        rowSquare.classList.add("square");
+        rowSquare.classList.add("square", "row");
         container.appendChild(rowSquare);
     }
 }
 
-makeRow(3)
+function makeColumns(numOfSquares) {
+    for (i = 0; i < rows.length; i++) {
+        for (j = 0; j < numOfSquares; j++) {
+            let columnSquare = document.createElement("div");
+            columnSquare.classList.add("square");
+            rows[j].appendChild(columnSquare);
+        }
+    }
+}
 
 // BEGIN function for new grid
 button.addEventListener("click", (event) => {
