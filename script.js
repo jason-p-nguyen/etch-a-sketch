@@ -1,7 +1,7 @@
 const container = document.getElementById("container");
 const button = document.querySelector("button");
 
-function generateGrid(numOfSquares) {
+function generateGrid(numOfSquares = 16) {
     //This loop creates the top-row of the grid
     for (let i = 0; i <= numOfSquares; i++) {
         // This loop fills out the grid from the top-row
@@ -21,7 +21,10 @@ function generateGrid(numOfSquares) {
 button.addEventListener("click", (event) => {
     numOfSquares = prompt("Please enter the number of squares you want", "16")
         if (numOfSquares == null) {
-            alert("Please entry a number.")
+            alert("Please enter a number.")
+        }
+        else if (!(Number.isInteger(numOfSquares))) {
+            alert("Please enter a whole number.")
         }
         else if (numOfSquares >= 100) {
             alert("Please enter a number less than 100.")
@@ -29,18 +32,17 @@ button.addEventListener("click", (event) => {
         else if (numOfSquares <= 0) {
             alert("Please enter a number greater than 0.")
         }
-        // else if (!(Number.isInteger(numOfSquares))) {
-        //     alert("Please enter a number between 1 and 99.")
-        // }
         else {
             generateGrid(numOfSquares);
         }
 });
 
 // SET limit to 100
-// SET width limit to 960px in CSS
+// SET max-width limit to 960px in CSS
 // REMOVE current grid
 // Generate new grid based on the input 
+
+// Make container evenly spaced, OR "boxed" (border-box?)
 
 // Randomize RGB colors for every square that is touched
 // BEGIN function randomColor
