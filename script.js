@@ -1,21 +1,31 @@
 const container = document.getElementById("container");
 const button = document.querySelector("button");
 
-function generateGrid(numOfSquares = 16) {
-    //This loop creates the top-row of the grid
-    for (let i = 0; i <= numOfSquares; i++) {
-        // This loop fills out the grid from the top-row
-        for (let j = 0; j <= numOfSquares; j++) {
-            let newSquare = document.createElement("div");
-            newSquare.classList.add("square");
-            container.appendChild(newSquare);
-            // Changes square background color
-            newSquare.addEventListener("mouseenter", (event) => {
-                event.target.style.backgroundColor = "purple";
-            });
-        };
-    };
-};
+// function generateGrid(numOfSquares = 3) {
+//     //This loop creates the top-row of the grid
+//     for (let i = 1; i <= numOfSquares; i++) {
+//         // This loop fills out the grid from the top-row
+//         for (let j = 1; j <= numOfSquares; j++) {
+//             let newSquare = document.createElement("div");
+//             newSquare.classList.add("square");
+//             container.appendChild(newSquare);
+//             // Changes square background color
+//             newSquare.addEventListener("mouseenter", (event) => {
+//                 event.target.style.backgroundColor = "purple";
+//             });
+//         };
+//     };
+// };
+
+function makeRow(numOfSquares) {
+    for (let i = 1; i <= numOfSquares; i++) {
+        let rowSquare = document.createElement("div");
+        rowSquare.classList.add("square");
+        container.appendChild(rowSquare);
+    }
+}
+
+makeRow(3)
 
 // BEGIN function for new grid
 button.addEventListener("click", (event) => {
