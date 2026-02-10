@@ -23,9 +23,10 @@ button.addEventListener("click", (event) => {
         if (numOfSquares == null) {
             alert("Please enter a number.")
         }
-        else if (!(Number.isInteger(numOfSquares))) {
-            alert("Please enter a whole number.")
-        }
+        // BUG
+        // else if (!(Number.isInteger(numOfSquares))) {
+        //     alert("Please enter a whole number.")
+        // }
         else if (numOfSquares >= 100) {
             alert("Please enter a number less than 100.")
         }
