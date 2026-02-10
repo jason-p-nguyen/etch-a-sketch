@@ -1,4 +1,5 @@
 const container = document.getElementById("container");
+const button = document.querySelector("button");
 
 function generateGrid(numOfSquares = 16) {
     //This loop creates the top-row of the grid
@@ -16,9 +17,13 @@ function generateGrid(numOfSquares = 16) {
     };
 };
 
-// GET variable reference for button
-const 
+
 // BEGIN function for new grid
+button.addEventListener("click", (event) => {
+    input = prompt("Please enter the number of squares you want", "16");
+    alert(input);
+})
+
 // LISTEN for CLICK
 // GET PROMPT INPUT from user for numOfSquares
 // SET limit to 100
