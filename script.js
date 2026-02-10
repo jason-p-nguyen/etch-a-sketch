@@ -1,29 +1,23 @@
-// GET variable reference for container
+const container = document.getElementById("container");
 
-// Create a 16x16 grid of squares divs using a loop
-// This creates the row of the grid
-// BEGIN function grid(numOfSquares)
-// SET numOfSquares = 16
-// INITIALIZE i = 0
-// FOR (i <= numOfSquares) 
-// Increase i++
-    // This creates the column for each row square
-    // Initialize j = 0
-    // FOR (j <= i.length)
-    // Increase step by j++
-    // Create element ("div")
-    // Set classList square
-    // ADD div element to container
-    // OUTPUT grid to webpage
-
-// SET hover effect 
-// GET event listener to listen for mouseenter
-// BEGIN anon function
-    // ADD classList backGroundcolor
-    // Set backGroundColor in CSS
-    // OUTPUT new square with a background
+function generateGrid(numOfSquares = 16) {
+    //This loop creates the top-row of the grid
+    for (let i = 0; i <= numOfSquares; i++) {
+        // This loop fills out the grid from the top-row
+        for (let j = 0; j <= numOfSquares; j++) {
+            let newSquare = document.createElement("div");
+            newSquare.classList.add("square");
+            container.appendChild(newSquare);
+            // Changes square background color
+            newSquare.addEventListener("mouseenter", (event) => {
+                event.target.style.backgroundColor = "purple";
+            })
+        };
+    };
+};
 
 // GET variable reference for button
+const 
 // BEGIN function for new grid
 // LISTEN for CLICK
 // GET PROMPT INPUT from user for numOfSquares
@@ -32,7 +26,7 @@
 // REMOVE current grid
 // Generate new grid based on the input 
 
-// Randomise RGB colors for every square that is touched
+// Randomize RGB colors for every square that is touched
 // BEGIN function randomColor
 // SET constant variable for randomColor
 // BEGIN anon function
@@ -43,4 +37,4 @@
 // CONNECT new rgb to backGroundColor
 
 
-
+generateGrid();

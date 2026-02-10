@@ -17,9 +17,13 @@ button {
     min-width: 0px;
 }
 
-.cell {
+div.square {
     flex: 1;
     padding: 10px;
-    border: 1px solid grey;
+    border: 1px solid black;
     margin: 0px; 
+}
+
+div.backgroundColor {
+    background-color: grey;
 }
