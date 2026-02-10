@@ -24,8 +24,23 @@
     // OUTPUT new square with a background
 
 // GET variable reference for button
-// GET INPUT from user for numOfSquares
+// BEGIN function for new grid
+// LISTEN for CLICK
+// GET PROMPT INPUT from user for numOfSquares
 // SET limit to 100
 // SET width limit to 960px in CSS
 // REMOVE current grid
 // Generate new grid based on the input 
+
+// Randomise RGB colors for every square that is touched
+// BEGIN function randomColor
+// SET constant variable for randomColor
+// BEGIN anon function
+// let r = Math.floor(Math.random() * 256)
+// let g = Math.floor(Math.random() * 256)
+// let b = Math.floor(Math.random()* 256)
+// return 'rgb(' + r + ',' + g + ',' b + ')';
+// CONNECT new rgb to backGroundColor
+
+
+
