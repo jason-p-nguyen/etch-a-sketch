@@ -19,8 +19,22 @@ function generateGrid(numOfSquares) {
 
 // BEGIN function for new grid
 button.addEventListener("click", (event) => {
-    numOfSquares = prompt("Please enter the number of squares you want", "16");
-    generateGrid(numOfSquares);
+    numOfSquares = prompt("Please enter the number of squares you want", "16")
+        if (numOfSquares == null) {
+            alert("Please entry a number.")
+        }
+        else if (numOfSquares >= 100) {
+            alert("Please enter a number less than 100.")
+        }
+        else if (numOfSquares <= 0) {
+            alert("Please enter a number greater than 0.")
+        }
+        // else if (!(Number.isInteger(numOfSquares))) {
+        //     alert("Please enter a number between 1 and 99.")
+        // }
+        else {
+            generateGrid(numOfSquares);
+        }
 });
 
 // SET limit to 100
