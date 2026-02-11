@@ -6,24 +6,23 @@ body {
 
 h1,
 button {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 #container {
     display: flex;
-    padding: 0px;
-    min-width: 0px;
+    flex-direction: column;
+    width: 800px;
+    height: 800px;
 }
 
 .row {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
+    display: flex;
+    flex-grow: 1;
 }
 
 div.square {
-    flex: 1;
-    padding: 10px;
+    flex-grow: 1;
     border: 1px solid black;
     margin: 0px; 
 }
