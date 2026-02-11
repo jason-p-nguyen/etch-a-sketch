@@ -28,11 +28,12 @@ function makeColumns(numOfSquares) {
             let columnSquare = document.createElement("div");
             columnSquare.classList.add("square");
             rows[j].appendChild(columnSquare);
+
         }
     }
 }
 
-generateGrid(4);
+generateGrid(16);
 
 button.addEventListener("click", (event) => {    
     // Removes current grid
@@ -40,7 +41,7 @@ button.addEventListener("click", (event) => {
     container.removeChild(container.firstChild);
     }
 
-    input = prompt("Please enter the number of squares you want", "4")
+    input = prompt("Please enter the number of squares you want", "64")
         if (input == null) {
             alert("Please enter a number.")
         }
@@ -59,16 +60,9 @@ button.addEventListener("click", (event) => {
         }
 });
 
-
-
-
-
-// Randomize RGB colors for every square that is touched
-// BEGIN function randomColor
-// SET constant variable for randomColor
-// BEGIN anon function
-// let r = Math.floor(Math.random() * 256)
-// let g = Math.floor(Math.random() * 256)
-// let b = Math.floor(Math.random()* 256)
-// return 'rgb(' + r + ',' + g + ',' b + ')';
-// CONNECT new rgb to backGroundColor
+function randomColor() {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    return "rgb(" + r + "," + g + "," + b + ")";
+}
