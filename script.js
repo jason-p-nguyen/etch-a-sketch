@@ -60,13 +60,6 @@ Array.from(squares).forEach(square => {
     })
 })
 
-// SET limit to 100
-// SET max-width limit to 960px in CSS
-// REMOVE current grid
-// Generate new grid based on the input 
-
-// Make container evenly spaced, OR "boxed" (border-box?)
-
 // Randomize RGB colors for every square that is touched
 // BEGIN function randomColor
 // SET constant variable for randomColor
