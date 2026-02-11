@@ -11,13 +11,11 @@ button {
 
 #container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     padding: 0px;
     min-width: 0px;
 }
 
-.square.row {
+.row {
     margin: 0px;
     padding: 0px;
     border: 0px;
