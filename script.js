@@ -1,7 +1,6 @@
 const container = document.getElementById("container");
 const button = document.querySelector("button");
 const rows = document.getElementsByClassName("row");
-const squares = document.getElementsByClassName("square");
 
 function generateGrid(numOfSquares) {
     makeRow(numOfSquares);
@@ -26,36 +25,40 @@ function makeColumns(numOfSquares) {
     }
 }
 
-generateGrid(16);
+generateGrid(4);
 
-Array.from(squares).forEach(square => {
-    square.addEventListener("mouseenter", (event) => {
-        event.target.style.backgroundColor = "purple";
-    })
-})
+button.addEventListener("click", (event) => {    
+    // Removes current grid
+    while (container.hasChildNodes()) {
+    container.removeChild(container.firstChild);
+    }
 
-// BEGIN function for new grid
-button.addEventListener("click", (event) => {
-    numOfSquares = prompt("Please enter the number of squares you want", "16")
-        if (numOfSquares == null) {
+    input = prompt("Please enter the number of squares you want", "4")
+        if (input == null) {
             alert("Please enter a number.")
         }
         // BUG
         // else if (!(Number.isInteger(numOfSquares))) {
         //     alert("Please enter a whole number.")
         // }
-        else if (numOfSquares >= 100) {
+        else if (input >= 100) {
             alert("Please enter a number less than 100.")
         }
-        else if (numOfSquares <= 0) {
+        else if (input <= 0) {
             alert("Please enter a number greater than 0.")
         }
         else {
-            generateGrid(numOfSquares);
+            generateGrid(input);
         }
 });
 
-
+// Change square color when mouse hovers over
+const squares = document.getElementsByClassName("square");
+Array.from(squares).forEach(square => {
+    square.addEventListener("mouseenter", (event) => {
+        event.target.style.backgroundColor = "purple";
+    })
+})
 
 // SET limit to 100
 // SET max-width limit to 960px in CSS
