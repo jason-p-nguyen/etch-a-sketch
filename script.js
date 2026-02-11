@@ -9,7 +9,7 @@ function generateGrid(numOfSquares) {
     // Change square color when mouse hovers over
     Array.from(squares).forEach(square => {
         square.addEventListener("mouseenter", (event) => {
-            event.target.style.backgroundColor = "purple";
+            event.target.style.backgroundColor = randomColor();
         })
     })
 }
@@ -28,7 +28,6 @@ function makeColumns(numOfSquares) {
             let columnSquare = document.createElement("div");
             columnSquare.classList.add("square");
             rows[j].appendChild(columnSquare);
-
         }
     }
 }
@@ -41,7 +40,7 @@ button.addEventListener("click", (event) => {
     container.removeChild(container.firstChild);
     }
 
-    input = prompt("Please enter the number of squares you want", "64")
+    input = prompt("Please enter the number of squares you want. (Max: 100)", "64")
         if (input == null) {
             alert("Please enter a number.")
         }
@@ -49,7 +48,7 @@ button.addEventListener("click", (event) => {
         // else if (!(Number.isInteger(numOfSquares))) {
         //     alert("Please enter a whole number.")
         // }
-        else if (input >= 100) {
+        else if (input > 100) {
             alert("Please enter a number less than 100.")
         }
         else if (input <= 0) {
