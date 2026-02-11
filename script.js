@@ -40,7 +40,7 @@ button.addEventListener("click", (event) => {
     container.removeChild(container.firstChild);
     }
 
-    input = prompt("Please enter the number of squares you want. (Max: 100)", "64")
+    input = prompt("Enter a number between 1 and 100", "64")
         if (input == null) {
             alert("Please enter a number.")
         }
