@@ -1,10 +1,17 @@
 const container = document.getElementById("container");
 const button = document.querySelector("button");
 const rows = document.getElementsByClassName("row");
+const squares = document.getElementsByClassName("square");
 
 function generateGrid(numOfSquares) {
     makeRow(numOfSquares);
     makeColumns(numOfSquares);
+    // Change square color when mouse hovers over
+    Array.from(squares).forEach(square => {
+        square.addEventListener("mouseenter", (event) => {
+            event.target.style.backgroundColor = "purple";
+        })
+    })
 }
 
 function makeRow(numOfSquares) {
@@ -52,13 +59,9 @@ button.addEventListener("click", (event) => {
         }
 });
 
-// Change square color when mouse hovers over
-const squares = document.getElementsByClassName("square");
-Array.from(squares).forEach(square => {
-    square.addEventListener("mouseenter", (event) => {
-        event.target.style.backgroundColor = "purple";
-    })
-})
+
+
+
 
 // Randomize RGB colors for every square that is touched
 // BEGIN function randomColor
@@ -69,6 +72,3 @@ Array.from(squares).forEach(square => {
 // let b = Math.floor(Math.random()* 256)
 // return 'rgb(' + r + ',' + g + ',' b + ')';
 // CONNECT new rgb to backGroundColor
-
-
-
