@@ -42,18 +42,17 @@ button.addEventListener("click", (event) => {
 
     input = prompt("Enter a number between 1 and 100", "64")
         if (input == null) {
-            alert("Please enter a number.")
+            alert("Please enter a number between 1 and 100.")
         }
-        // BUG
-        // else if (!(Number.isInteger(numOfSquares))) {
-        //     alert("Please enter a whole number.")
-        // }
         else if (input > 100) {
-            alert("Please enter a number less than 100.")
+            alert("Please enter a number between 1 and 100.")
         }
         else if (input <= 0) {
-            alert("Please enter a number greater than 0.")
+            alert("Please enter a number between 1 and 100.")
         }
+        // floats
+        // strings
+        // special characters
         else {
             generateGrid(input);
         }
